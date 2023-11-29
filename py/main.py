@@ -10,8 +10,18 @@
 #                                             ┃ ┃┏┓┓╋                                             #
 #                                             ┗━┛┛┗┗┗                                             #
 ###################################################################################################
-# Version: 0.1.0                                                                                  #
+# Version: 0.1.1                                                                                  #
 # Copyright (c): Ghost Town                                                                       #
 ###################################################################################################
 
-print("Hello World from Ghost Town.")
+import eel
+
+eel.init("Gui")
+
+@eel.expose
+def App():
+    print("Application Running")
+
+App()
+
+eel.start("index.html", size=(1024, 600))
