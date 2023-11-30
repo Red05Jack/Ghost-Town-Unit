@@ -14,26 +14,42 @@ function getRandomNumber(min, max) {
 }
 
 
-//
-function randomiz(element) {
+//Randomiz the Digits
+function randomiz() {
+  // Hiermit greifen wir auf das HTML-Element mit der ID "mainFrame" zu
+  var meinElement = document.getElementById('mainFrame');
+  var computedStyle = window.getComputedStyle(meinElement);
+  var hoeheString  = computedStyle.getPropertyValue('height');
 
-  const fontSize = getRandomNumber(95, 105);
-  const marginRight = getRandomNumber(0, 8);
-  const color = "rgba(0, 128, 255, 0.7)";
-  const rotation = getRandomNumber(-8, 8);
+  var height = parseInt(hoeheString);
 
-  console.log(fontSize);
-    console.log(marginRight);
-      console.log(color);
-        console.log(rotation);
 
-  hoursDigitOne.style.fontSize = fontSize + "px";
-  hoursDigitOne.style.marginRight = "-" + marginRight + "px";
-  hoursDigitOne.style.color = color
-  hoursDigitOne.style.transform = "rotate(" + rotation + "deg)";
+  hoursDigitOne.style.fontSize = getRandomNumber((height * 1.5) - 2, (height * 1.5) + 2) + "px";
+  hoursDigitOne.style.marginRight = "-" + getRandomNumber(4, 8) + "px";
+  hoursDigitOne.style.color = "rgba(0, 168, 180, 0.7)";
+  hoursDigitOne.style.transform = "rotate(" + getRandomNumber(-8, 8) + "deg)";
 
-  // Output to the Console
-  console.log("Test");
+  hoursDigitTwo.style.fontSize = getRandomNumber((height * 1.5) - 2, (height * 1.5) + 2) + "px";
+  hoursDigitTwo.style.marginRight = "-" + getRandomNumber(4, 8) + "px";
+  hoursDigitTwo.style.color = "rgba(54, 234, 245, 0.7)";
+  hoursDigitTwo.style.transform = "rotate(" + getRandomNumber(-8, 8) + "deg)";
+
+
+  delimiter.style.fontSize = getRandomNumber((height * 1.5) - 2, (height * 1.5) + 2) + "px";
+  delimiter.style.marginRight = "-" + getRandomNumber(4, 8) + "px";
+  delimiter.style.color = "rgba(200, 200, 200, 0.9)"
+  delimiter.style.transform = "rotate(" + getRandomNumber(-8, 8) + "deg)";
+
+
+  minutesDigitOne.style.fontSize = getRandomNumber((height * 1.5) - 2, (height * 1.5) + 2) + "px";
+  minutesDigitOne.style.marginRight = "-" + getRandomNumber(4, 8) + "px";
+  minutesDigitOne.style.color = "rgba(0, 168, 180, 0.7)";
+  minutesDigitOne.style.transform = "rotate(" + getRandomNumber(-8, 8) + "deg)";
+
+  minutesDigitTwo.style.fontSize = getRandomNumber((height * 1.5) - 2, (height * 1.5) + 2) + "px";
+  minutesDigitTwo.style.marginRight = "-" + getRandomNumber(4, 8) + "px";
+  minutesDigitTwo.style.color = "rgba(54, 234, 245, 0.7)";
+  minutesDigitTwo.style.transform = "rotate(" + getRandomNumber(-8, 8) + "deg)";
 }
 
 
@@ -52,6 +68,38 @@ function clockPrint() {
   const hoursDigit = Array.from(String(hours));
   const minutesDigit = Array.from(String(minutes));
 
+
+  // Randomiz the Digits
+  var hoursElementOne = document.getElementById("hoursDigitOne");
+  var hoursDigitOneOld = hoursElementOne.textContent;
+
+  var hoursElementTwo = document.getElementById("hoursDigitTwo");
+  var hoursDigitTwoOld = hoursElementTwo.textContent;
+
+  var minutesElementOne = document.getElementById("minutesDigitOne");
+  var minutesDigitOneOld = minutesElementOne.textContent;
+
+  var minutesElementTwo = document.getElementById("minutesDigitTwo");
+  var minutesDigitTwoOld = minutesElementTwo.textContent;
+
+
+  if (String(hoursDigitOneOld) !== String(hoursDigit[0])) {
+    randomiz();
+  }
+
+  if (String(hoursDigitTwoOld) !== String(hoursDigit[1])) {
+    randomiz();
+  }
+
+  if (String(minutesDigitOneOld) !== String(minutesDigit[0])) {
+    randomiz();
+  }
+
+  if (String(minutesDigitTwoOld) !== String(minutesDigit[1])) {
+    randomiz();
+  }
+
+
   // Output to the HTML document
   document.getElementById("hoursDigitOne").innerHTML = hoursDigit[0];
   document.getElementById("hoursDigitTwo").innerHTML = hoursDigit[1];
@@ -59,15 +107,12 @@ function clockPrint() {
   document.getElementById("minutesDigitOne").innerHTML = minutesDigit[0];
   document.getElementById("minutesDigitTwo").innerHTML = minutesDigit[1];
 
-  // Randomiz the Digits
-  randomiz();
-
   // Output to the Console
   console.log("Current time: " + hours + ":" + minutes);
 }
 
 // Update the clock every second
-setInterval(clockPrint, 60000);
+setInterval(clockPrint, 1000);
 
 // Initial call to display the current time immediately
 clockPrint();

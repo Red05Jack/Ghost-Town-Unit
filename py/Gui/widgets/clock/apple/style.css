@@ -5,6 +5,10 @@
     /* Weitere Optionen: font-weight, font-style, etc. */
 }
 
+body {
+  overflow: hidden;
+}
+
 #mainFrame {
   position: absolute;
   top: 0;
