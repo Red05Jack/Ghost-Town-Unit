@@ -1,3 +1,10 @@
+@font-face {
+    font-family: "appleClock"; /* Wählen Sie einen Namen für Ihren Font */
+    src: url("font/appleClockV1.woff") format("woff"), /* Geben Sie den Pfad zum Font-Dateiformat an */
+         url("font/appleClockV1.woff") format("ttf"); /* Fügen Sie alternative Formate hinzu, wenn nötig */
+    /* Weitere Optionen: font-weight, font-style, etc. */
+}
+
 #mainFrame {
   position: absolute;
   top: 0;
@@ -5,10 +12,25 @@
 
   width: 100%;
   height: 100%;
+}
 
-  background-color: blue;
+#clock {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: fit-content;
+  height: fit-content;
+
+  transform: translate(-50%, -50%);
+  display: flex;
+
+  font-family: appleClock;
 }
 
 .digit {
   font-size: 100px;
+  margin-right: -8px;
+  color: rgba(255, 255, 255, 1.000);
+  transform: rotate(0deg);
 }
