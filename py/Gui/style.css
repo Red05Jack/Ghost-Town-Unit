@@ -17,6 +17,7 @@
   width: 59.960%;
   height: 93.333%;
 
+  border: 0;
   border-radius: 30px;
 
   background-color: red;
@@ -26,6 +27,8 @@
   position: absolute;
   top: 3.333%;
   left: 63.867%;
+
+  border: 0;
 
   width: 34.179%;
   height: 20.000%;
@@ -40,6 +43,7 @@
   width: 34.179%;
   height: 33.333%;
 
+  border: 0;
   border-radius: 30px;
 
   background-color: red;
