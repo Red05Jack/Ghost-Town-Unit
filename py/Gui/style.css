@@ -1,0 +1,54 @@
+#mainFrame {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: black;
+}
+
+#mainWidget {
+  position: absolute;
+  top: 3.333%;
+  left: 1.953%;
+
+  width: 59.960%;
+  height: 93.333%;
+
+  border-radius: 30px;
+
+  background-color: red;
+}
+
+#clock {
+  position: absolute;
+  top: 3.333%;
+  left: 63.867%;
+
+  width: 34.179%;
+  height: 20.000%;
+
+  background-color: red;
+}
+
+.smallWidget {
+  position: absolute;
+  left: 63.867%;
+
+  width: 34.179%;
+  height: 33.333%;
+
+  border-radius: 30px;
+
+  background-color: red;
+}
+
+#smallWidgetOne {
+  top: 26.666%;
+}
+
+#smallWidgetTwo {
+  top: 63.333%;
+}
