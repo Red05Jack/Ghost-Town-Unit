@@ -1,3 +1,7 @@
+button {
+  border: 0;
+}
+
 #mainFrame {
   position: absolute;
   top: 0;
@@ -32,31 +36,72 @@
   background-color: yellow;
   border-radius: 1000px;
 }
-}
 
-#button {
+#controlls {
   position: absolute;
   top: 65%;
   left: 5.714%;
 
-  width: 18.857%;
+  width: 88.571%;
   height: 25%;
+}
+
+#button {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 21.290%;
+  height: 100%;
 }
 
 #button2 {
   position: absolute;
-  top: 65%;
-  left: 43.428%;
+  top: 0;
+  left: 42.580%;
 
-  width: 13.142%;
-  height: 25%;
+  width: 14.838%;
+  height: 100%;
 }
 
 #button3 {
   position: absolute;
-  top: 65%;
-  left: 75.428%;
+  top: 0;
+  left: 78.709%;
 
-  width: 18.857%;
-  height: 25%;
+  width: 21.290%;
+  height: 100%;
+}
+
+#arrow1 {
+  position: absolute;
+  top: 0;
+  left: -66.666%;
+
+  width: 66.666%;
+  height: 100%;
+
+  background-color: red;
+}
+
+#arrow {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 66.666%;
+  height: 100%;
+
+  background-color: red;
+}
+
+#pouse {
+  position: absolute;
+  top: 0;
+  left: 75.757%;
+
+  width: 24.242%;
+  height: 100%;
+
+  background: red;
 }
