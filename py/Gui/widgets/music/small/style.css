@@ -64,7 +64,7 @@ button {
   height: 25%;
 }
 
-.button {
+.buttonBackward {
   position: absolute;
   top: 0;
   left: 0;
@@ -73,9 +73,11 @@ button {
   height: 100%;
 
   background-color: rgba(0, 0, 0, 0);
+
+  transform: rotate(180deg);
 }
 
-.button2 {
+.buttonPlayPause {
   position: absolute;
   top: 0;
   left: 42.580%;
@@ -97,7 +99,7 @@ button {
   fill: rgba(0, 0, 0, 1);
 }
 
-.button3 {
+.buttonForward {
   position: absolute;
   top: 0;
   left: 78.709%;
@@ -106,84 +108,4 @@ button {
   height: 100%;
 
   background-color: rgba(0, 0, 0, 0);
-}
-
-#arrow1 {
-  position: absolute;
-  top: 0;
-  left: -66.666%;
-
-  width: 66.666%;
-  height: 100%;
-
-  fill: rgba(0, 0, 0, 0);
-
-  animation-name: keyArrowOne;
-  animation-duration: 0.5s;
-}
-
-#arrow {
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  width: 66.666%;
-  height: 100%;
-
-  fill: rgba(0, 0, 0, 1);
-
-  animation-name: keyArrowTwo;
-  animation-duration: 0.5s;
-}
-
-#pouse {
-  position: absolute;
-  top: 0;
-  left: 75.757%;
-
-  width: 24.242%;
-  height: 100%;
-
-  fill: rgba(0, 0, 0, 1);
-
-  animation-name: keyBar;
-  animation-duration: 0.5s;
-}
-
-@keyframes keyArrowOne {
-  0% {
-    transform: translateX(0%);
-    fill: rgba(0, 0, 0, 0);
-  }
-
-  100% {
-    transform: translateX(100%);
-    fill: rgba(0, 0, 0, 1);
-  }
-}
-
-@keyframes keyArrowTwo {
-  0% {
-    transform: translateX(0%);
-    fill: rgba(0, 0, 0, 1);
-  }
-
-  100% {
-    transform: translateX(120%);
-    fill: rgba(0, 0, 0, 0);
-  }
-}
-
-@keyframes keyBar {
-  10% {
-    transform: translateX(0%);
-  }
-
-  30% {
-    transform: translateX(-10%);
-  }
-
-  40% {
-    transform: translateX(0%);
-  }
 }

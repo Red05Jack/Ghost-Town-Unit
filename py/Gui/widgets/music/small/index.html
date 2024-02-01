@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./arrowStyle.css">
     <script src="controlls.js"></script>
     <title>Ghost Town Music Small</title>
   </head>
@@ -13,24 +14,17 @@
     <div id="mainFrame">
       <div id="SongText">Hi</div>
       <div id="KuenstlerText">Hi</div>
+      <div id="TimeNow">1:20</div>
+      <div id="TimeGes">5:34</div>
       <div id="bar">
         <div id="inerBar"></div>
       </div>
+
+      <!-- Kontroll Buttons -->
       <div id="controlls">
-        <div class="button">
-        </div>
-        <button class="button" onclick="PlayBackward()"></button>
 
-        <div class="button2">
-          <div id="button2index">
-            <svg id="play" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124.724 141.732">
-              <path id="svgArrowTwo" d="m0,9.358v123.026c0,7.194,7.796,11.684,14.019,8.073l106.061-61.532c6.193-3.593,6.193-12.535,0-16.128L14.034,1.276C7.805-2.338,0,2.156,0,9.358Z"/>
-            </svg>
-          </div>
-        </div>
-        <button class="button2" onclick="Pouse()"></button>
-
-        <div class="button3">
+        <!-- Button Backward -->
+        <div class="buttonBackward">
           <div id="arrow1">
             <svg id="play" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124.724 141.732">
               <path id="svgArrowOne" d="m0,9.358v123.026c0,7.194,7.796,11.684,14.019,8.073l106.061-61.532c6.193-3.593,6.193-12.535,0-16.128L14.034,1.276C7.805-2.338,0,2.156,0,9.358Z"/>
@@ -47,7 +41,37 @@
             </svg>
           </div>
         </div>
-        <button class="button3" onclick="PlayForward()"></button>
+        <button class="buttonBackward" onclick="PlayBackward()"></button>
+
+        <!-- Button Play/Pause -->
+        <div class="buttonPlayPause">
+          <div id="button2index">
+            <svg id="play" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124.724 141.732">
+              <path id="svgArrowTwo" d="m0,9.358v123.026c0,7.194,7.796,11.684,14.019,8.073l106.061-61.532c6.193-3.593,6.193-12.535,0-16.128L14.034,1.276C7.805-2.338,0,2.156,0,9.358Z"/>
+            </svg>
+          </div>
+        </div>
+        <button class="buttonPlayPause" onclick="PlayPouse()"></button>
+
+        <!-- Button Forward -->
+        <div class="buttonForward">
+          <div id="arrow1">
+            <svg id="play" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124.724 141.732">
+              <path id="svgArrowOne" d="m0,9.358v123.026c0,7.194,7.796,11.684,14.019,8.073l106.061-61.532c6.193-3.593,6.193-12.535,0-16.128L14.034,1.276C7.805-2.338,0,2.156,0,9.358Z"/>
+            </svg>
+          </div>
+          <div id="arrow">
+            <svg id="play" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124.724 141.732">
+              <path id="svgArrowTwo" d="m0,9.358v123.026c0,7.194,7.796,11.684,14.019,8.073l106.061-61.532c6.193-3.593,6.193-12.535,0-16.128L14.034,1.276C7.805-2.338,0,2.156,0,9.358Z"/>
+            </svg>
+          </div>
+          <div id="pouse">
+            <svg id="Ebene_1" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.354 141.732">
+              <rect id="svgPouse" width="45.354" height="141.732" rx="9.329" ry="9.329"/>
+            </svg>
+          </div>
+        </div>
+        <button class="buttonForward" onclick="PlayForward()"></button>
       </div>
     </div>
   </body>
