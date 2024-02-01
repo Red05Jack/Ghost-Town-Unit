@@ -1,0 +1,47 @@
+@import url('C:\\Users\\Jakob Wurzrainer\\Documents\\GitHub\\Ghost-Town-Unit\\py\\Gui\\font\\SF-Pro\\SF-Pro.css');
+
+#SongText {
+  position: absolute;
+  top: 6.014%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  font-family: 'SF Pro Text';
+  font-weight: 600;
+  font-size: 32px;
+
+  white-space: nowrap;
+}
+
+#KuenstlerText {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  font-family: 'SF Pro Text';
+  font-weight: 500;
+  font-size: 18px;
+
+  white-space: nowrap;
+}
+
+#TimeNow {
+  position: absolute;
+  left: 5.714%;
+  bottom: 53.107%;
+
+  font-family: 'SF Pro Display';
+  font-weight: 500;
+  font-size: 18px;
+}
+
+#TimeGes {
+  position: absolute;
+  right: 5.714%;
+  bottom: 53.107%;
+
+  font-family: 'SF Pro Display';
+  font-weight: 500;
+  font-size: 18px;
+}
