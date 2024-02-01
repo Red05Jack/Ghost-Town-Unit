@@ -1,4 +1,4 @@
-#arrow1 {
+#divForwardArrowTwo {
   position: absolute;
   top: 0;
   left: -66.666%;
@@ -9,7 +9,7 @@
   fill: rgba(0, 0, 0, 0);
 }
 
-#arrow {
+#divForwardArrowOne {
   position: absolute;
   top: 0;
   left: 0;
@@ -20,7 +20,7 @@
   fill: rgba(0, 0, 0, 1);
 }
 
-#pouse {
+#divForwardBar {
   position: absolute;
   top: 0;
   left: 75.757%;
@@ -31,7 +31,8 @@
   fill: rgba(0, 0, 0, 1);
 }
 
-@keyframes keyArrowOne {
+/* Animation Forward */
+@keyframes forwardKeyArrowTwo {
   0% {
     transform: translateX(0%);
     fill: rgba(0, 0, 0, 0);
@@ -43,7 +44,7 @@
   }
 }
 
-@keyframes keyArrowTwo {
+@keyframes forwardKeyArrowOne {
   0% {
     transform: translateX(0%);
     fill: rgba(0, 0, 0, 1);
@@ -55,7 +56,7 @@
   }
 }
 
-@keyframes keyBar {
+@keyframes forwardKeyBar {
   10% {
     transform: translateX(0%);
   }
@@ -69,15 +70,14 @@
   }
 }
 
-
-.animate1 {
-  animation: keyArrowOne 0.5s;
+.forwardAnimationArrowTwo {
+  animation: forwardKeyArrowTwo 0.5s;
 }
 
-.animate2 {
-  animation: keyArrowTwo 0.5s;
+.forwardAnimationArrowOne {
+  animation: forwardKeyArrowOne 0.5s;
 }
 
-.animate3 {
-  animation: keyBar 0.5s;
+.forwardAnimationBar {
+  animation: forwardKeyBar 0.5s;
 }
