@@ -1,0 +1,78 @@
+#songNameLabel {
+  position: absolute;
+  top: 6.014%;
+
+  font-family: 'SF Pro Text';
+  font-weight: 600;
+  font-size: 32px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+#songArtistNameLabel {
+  position: absolute;
+  top: 25%;
+
+  font-family: 'SF Pro Text';
+  font-weight: 500;
+  font-size: 18px;
+
+  white-space: nowrap;
+}
+
+.centered {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.slide {
+  left: 0;
+
+  animation:
+    test1 5s ease-out,
+    test2 5s ease-in 15s; /* Beginnt nach der ersten Animation */
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-duration: 20s;
+}
+
+@keyframes test1 {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(100px);
+  }
+}
+
+@keyframes test2 {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(100px);
+  }
+}
+
+
+@keyframes scrollSongText {
+  0%, 20% { /* 0% bis 20%: Bewegung vom Startpunkt zum Endpunkt */
+    transform: translateX(20px); /* Beginnt 20px vom linken Rand */
+  }
+  25% { /* 25%: Endpunkt der Bewegung nach links */
+    transform: translateX(calc(-100% + 350px - 20px - 20px)); /* Bewegt den Text nach links, stoppt 20px vor dem rechten Rand */
+  }
+  25.1%, 70% { /* 25.1% bis 70%: Pause */
+    transform: translateX(calc(-100% + 350px - 20px - 20px)); /* Bleibt am gleichen Ort (20px vor dem rechten Rand) */
+  }
+  75% { /* 75%: Bewegung zurück zum Startpunkt */
+    transform: translateX(20px); /* Bewegt den Text zurück nach rechts, stoppt 20px vor dem linken Rand */
+  }
+  100% { /* 100%: Endpunkt der Bewegung nach rechts */
+    transform: translateX(20px); /* Endet 20px vom linken Rand */
+  }
+}

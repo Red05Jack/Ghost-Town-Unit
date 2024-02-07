@@ -5,20 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+
+    <link rel="stylesheet" href="./textStyle.css">
+
     <link rel="stylesheet" href="./arrowBackwordStyle.css">
-    <link rel="stylesheet" href="./arrowForwardStyle.css">
     <link rel="stylesheet" href="./playPauseStyle.css">
+    <link rel="stylesheet" href="./arrowForwardStyle.css">
     <script src="controlls.js"></script>
     <title>Ghost Town Music Small</title>
+
+    <script defer>
+      function checkTextWidth() {
+        const songText = document.getElementById('SongText');
+        const containerWidth = 350; // Die Breite des Containers
+
+        if (songText.offsetWidth + 40 > containerWidth) { // +40 für den linken und rechten Padding
+          // Wenn der Text (mit Padding) breiter ist als der Container, Animation abspielen
+          songText.style.animationPlayState = 'running';
+        } else {
+          // Wenn der Text (mit Padding) nicht breiter ist, Animation stoppen
+          songText.style.animationPlayState = 'paused';
+        }
+      }
+
+      // Event-Listener für das Laden der Seite und die Größenänderung des Fensters
+      window.onload = checkTextWidth;
+      window.onresize = checkTextWidth;
+    </script>
   </head>
   <body>
     <div id="backgroundImage"></div>
     <div id="smoke"></div>
     <div id="mainFrame">
-      <div id="SongText">Heat Waves</div>
-      <div id="KuenstlerText">Glass Animals</div>
+      <!-- Song Labels -->
+      <div id="songNameLabel" class="slide">MONEY ON THE DASH - SPED UP</div>
+      <div id="songArtistNameLabel" class="centered">Glass Animals</div>
+
+      <!-- Time Labels -->
       <div id="TimeNow">1:25</div>
       <div id="TimeGes">-2:34</div>
+
+      
+
+      <!-- Time Bar -->
       <div id="bar">
         <div id="inerBar"></div>
       </div>
